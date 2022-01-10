@@ -10,7 +10,7 @@ export default class TodoContainer extends React.Component {
     todos: []
   }
   componentDidUpdate(prevPros, prevState) {
-    if(prevState.todos != this.state.todos) {
+    if(prevState.todos !== this.state.todos) {
       const temp = JSON.stringify(this.state.todos)
       localStorage.setItem("todos", temp)
     }
