@@ -5,6 +5,9 @@ export default class TodoItem extends React.Component {
   state = {
     editing: false,
   }
+  componentWillUnmount() {
+    console.log("cleaning up...")
+  }
   handleEditing = () => {
     this.setState({
       editing: true,
